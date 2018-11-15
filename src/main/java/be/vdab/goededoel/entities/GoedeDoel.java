@@ -14,4 +14,12 @@ public class GoedeDoel {
 	public BigDecimal getOpgebracht() {
 		return opgebracht;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof GoedeDoel))
+			return false;
+		return ((GoedeDoel) obj).naam.equalsIgnoreCase(this.naam);
+	}
+	
 }
